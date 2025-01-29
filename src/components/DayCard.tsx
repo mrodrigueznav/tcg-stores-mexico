@@ -11,8 +11,8 @@ interface DayCardProps {
 }
 
 export function DayCard({ day, stores }: DayCardProps) {
-  const getGoogleMapsUrl = (address: string) => {
-    const query = encodeURIComponent(`${address}, México`);
+  const getGoogleMapsUrl = (store: Store) => {
+    const query = encodeURIComponent(`${store.name} ${store.address}, México`);
     return `https://www.google.com/maps/search/?api=1&query=${query}`;
   };
 
@@ -34,10 +34,10 @@ export function DayCard({ day, stores }: DayCardProps) {
           <div key={store.id} className="group bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md hover:border-indigo-200 dark:hover:border-indigo-500/30 transition-all duration-300">
             <div className="p-4 border-b border-gray-50 dark:border-gray-700">
               <div className="flex items-start gap-3">
-                {store.id === 'kitsune' ? (
+                {store.logo ? (
                   <img 
-                    src="https://scontent.fmex10-1.fna.fbcdn.net/v/t39.30808-6/474475371_122184721478113103_8608722897917153997_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEupct1gD3Y1hzbN7IoFRsbMEviYOfd960wS-Jg5933rdDCviWNYQbj7IU0FGvgvKZuI2TvtkxeqI2zT2J3Q6Aw&_nc_ohc=W9S7Yen886YQ7kNvgGhsicI&_nc_zt=23&_nc_ht=scontent.fmex10-1.fna&_nc_gid=AVMz3Den3K-PhprZX0Brq8-&oh=00_AYDJZhZliFdwwqn426cjraZiDZnjmTXYthMu7Qop2Cfung&oe=679F4F31"
-                    alt="Kitsune Hobby Center Logo"
+                    src={store.logo}
+                    alt={`${store.name} Logo`}
                     className="w-10 h-10 rounded-lg object-cover flex-shrink-0"
                   />
                 ) : (
@@ -65,7 +65,7 @@ export function DayCard({ day, stores }: DayCardProps) {
                   )}
                   
                   <a 
-                    href={getGoogleMapsUrl(store.address)}
+                    href={getGoogleMapsUrl(store)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-start gap-1.5 text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors mt-1 group/address"
