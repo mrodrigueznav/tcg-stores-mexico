@@ -57,7 +57,7 @@ function App() {
                 <GamepadIcon className="w-6 h-6 text-white" />
               </div>
               <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
-                TCG Stores México
+                TCG México
               </h1>
             </div>
             <div className="flex items-center">
