@@ -4,7 +4,13 @@ import { DayCard } from './components/DayCard';
 import { MapPin, DicesIcon, Search, Calendar, Moon, Sun } from 'lucide-react';
 
 const estados = Array.from(new Set(stores.map(store => store.estado))).sort();
-const daysOrder = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+
+const daysOrderBase = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+const today = new Date().toLocaleDateString('es-MX', { weekday: 'long' });
+const capitalizedToday = today.charAt(0).toUpperCase() + today.slice(1); // Ensure it matches your array
+const todayIndex = daysOrderBase.indexOf(capitalizedToday);
+
+const daysOrder = [...daysOrderBase.slice(todayIndex), ...daysOrderBase.slice(0, todayIndex)];
 
 function App() {
   const [selectedEstado, setSelectedEstado] = useState<string>('Ciudad de México');
