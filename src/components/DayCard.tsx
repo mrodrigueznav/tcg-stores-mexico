@@ -1,4 +1,3 @@
-import React from 'react';
 import { Store } from '../data/stores';
 import { Calendar, MapPin, Clock, Store as StoreIcon, ExternalLink } from 'lucide-react';
 

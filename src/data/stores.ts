@@ -336,7 +336,8 @@ export const stores: Store[] = [
         description: 'Liga Lorcana'
       }
     ],
-    contact: {}
+    contact: {},
+    logo: 'https://scontent.fmex10-3.fna.fbcdn.net/v/t39.30808-6/430178854_10211416908695778_210850384840476715_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG2-K_AewnAJqSKOxbYG4JA_JBzCJWd8Sz8kHMIlZ3xLA3irErlUooe8bBJhfFDVKWNVazIalnB61mCd5gd-FSB&_nc_ohc=5QSJpqn_wwkQ7kNvgEWvZZU&_nc_zt=23&_nc_ht=scontent.fmex10-3.fna&_nc_gid=A0hKft1tZJ_6E7hNa0n7WCC&oh=00_AYD1uxhpcoVvWbEyt-CHyx-xDmehMxL2xFKb51R7vzQz1g&oe=679F695D'
   },
   {
     id: 'cerebrum-gala',

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Store } from '../data/stores';
 import { MapPin, Phone, Facebook, Instagram, Calendar } from 'lucide-react';
 

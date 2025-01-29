@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Store, stores } from './data/stores';
 import { DayCard } from './components/DayCard';
-import { MapPin, GamepadIcon, Search, Calendar, Moon, Sun } from 'lucide-react';
+import { MapPin, DicesIcon, Search, Calendar, Moon, Sun } from 'lucide-react';
 
 const estados = Array.from(new Set(stores.map(store => store.estado))).sort();
-const games = ['Pokemon', 'Lorcana'] as const;
 const daysOrder = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
 
 function App() {
@@ -54,7 +53,7 @@ function App() {
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="bg-indigo-600 dark:bg-indigo-500 p-2 rounded-lg">
-                <GamepadIcon className="w-6 h-6 text-white" />
+                <DicesIcon className="w-6 h-6 text-white" />
               </div>
               <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
                 TCG México
@@ -97,7 +96,7 @@ function App() {
 
             <div className="flex-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                <GamepadIcon className="w-4 h-4 inline-block mr-1 text-indigo-600 dark:text-indigo-400" /> Juego
+                <DicesIcon className="w-4 h-4 inline-block mr-1 text-indigo-600 dark:text-indigo-400" /> Juego
               </label>
               <div className="relative">
                 <select
